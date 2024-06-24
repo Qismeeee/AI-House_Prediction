@@ -89,3 +89,13 @@ plt.title('Average House Price by Gymnasium')
 plt.xlabel('Gymnasium')
 plt.ylabel('Average Price')
 plt.show()
+
+# Tính toán ma trận tương quan
+corr_matrix = df.corr()
+
+# Vẽ ma trận tương quan
+plt.figure(figsize=(16, 12))
+sns.heatmap(corr_matrix, annot=True, fmt=".2f",
+            cmap="coolwarm", vmin=-1, vmax=1)
+plt.title('Correlation Matrix of Housing Data')
+plt.show()
